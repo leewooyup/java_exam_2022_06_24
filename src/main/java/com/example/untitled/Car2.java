@@ -6,22 +6,26 @@ public class Car2 {
     public static void main(String[] args) {
 
         // 구현시작
-        Car c1 = new Car();
-        Car c2 = new Car();
+        SpeedCar c1 = new SpeedCar();
+        SpeedCar c2 = new SpeedCar();
         c1.maxSpeed = 100;
         c2.maxSpeed = 200;
         // 구현끝
 
-//        .달리다();
+        c1.run();
         // 출력 => 자동차가 최고속력 230km로 달립니다.
 
-//        a자동차2.달리다();
+        c2.run();
         // 출력 => 자동차가 최고속력 210km로 달립니다.
     }
 }
 
-class Car {
+class SpeedCar {
     // 구현
     int maxSpeed;
+
+    void run() {
+        System.out.println("자동차가 최고속력 " + this.maxSpeed + "km로 달립니다.");
+    }
 
 }
